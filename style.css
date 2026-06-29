@@ -1,22 +1,36 @@
-h1, .titulo2{
+* {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1,
+.titulo2 {
     text-align: center;
 }
-body{
+
+body {
     background-color: rgb(86, 86, 122);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.paragrafo{
-    color: aqua;
-}
+
 p {
-font-size: 14px;
-text-align: justify;
+    font-size: 14px;
+    text-align: justify;
 }
-.imagem{
+
+.imagem {
     display: block;
     margin: auto;
     height: auto;
     max-width: 100%;
     border-radius: 10px;
-    
+}
+
+.receita {
+    width: 70%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
 }

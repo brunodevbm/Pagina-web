@@ -1,0 +1,79 @@
+/* ==========================================================
+   home.css
+   Estilos exclusivos da página inicial (index.html):
+   a grade de cartões (cards) de receitas.
+   ========================================================== */
+
+.grade-receitas {
+  max-width: 1000px;
+  margin: 44px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.card-receita {
+  background: var(--cor-cartao);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-receita:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .22);
+}
+
+.card-imagem {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #eee; /* aparece caso a imagem ainda não exista */
+}
+
+.card-conteudo {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.card-conteudo h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.2rem;
+  color: var(--cor-acento-escuro);
+}
+
+.card-conteudo p {
+  font-size: .92rem;
+  color: var(--cor-texto-suave);
+  flex: 1;
+}
+
+.card-link {
+  align-self: flex-start;
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--cor-acento-escuro);
+  text-decoration: none;
+  border-bottom: 2px solid var(--cor-acento);
+  padding-bottom: 2px;
+}
+
+.card-link:hover {
+  color: var(--cor-acento);
+}
+
+/* Mensagem exibida quando ainda não há nenhuma receita cadastrada */
+.vazio {
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  grid-column: 1 / -1;
+}

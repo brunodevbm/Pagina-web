@@ -1,0 +1,94 @@
+/* ==========================================================
+   style.css
+   Estilos GLOBAIS do site (compartilhados por todas as páginas).
+   Estilos específicos de cada página ficam em arquivos separados:
+   home.css (página inicial) e receita.css (páginas de receita).
+   ========================================================== */
+
+:root {
+  /* Paleta de cores do site — troque só aqui para re-temar tudo */
+  --cor-fundo: #454564;
+  --cor-cartao: #ffffff;
+  --cor-texto: #2b2b38;
+  --cor-texto-suave: #5c5c72;
+  --cor-acento: #e8a33d;        /* dourado, cor da casquinha do pão de queijo */
+  --cor-acento-escuro: #5d2ea8; /* violeta */
+  --cor-like: #4c9a6a;
+  --cor-dislike: #c0533e;
+
+  --fonte-titulo: "Fredoka", Verdana, sans-serif;
+  --fonte-corpo: "Nunito", Verdana, Geneva, Tahoma, sans-serif;
+
+  --raio: 12px;
+  --sombra: 0 5px 20px rgba(0, 0, 0, .15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  font-family: var(--fonte-corpo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+/* ---------- Cabeçalho (usado em todas as páginas) ---------- */
+
+header {
+  position: relative;
+  background: var(--cor-acento-escuro);
+  color: #fff;
+  text-align: center;
+  padding: 26px 20px;
+}
+
+header h1 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: .3px;
+}
+
+header p.tagline {
+  margin-top: 6px;
+  font-size: .95rem;
+  opacity: .9;
+}
+
+/* Link "Voltar" usado nas páginas de receita para retornar à página inicial */
+.voltar {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .85rem;
+  padding: 7px 14px;
+  border: 1px solid rgba(255, 255, 255, .6);
+  border-radius: 999px;
+  transition: background .2s ease;
+  white-space: nowrap;
+}
+
+.voltar:hover {
+  background: rgba(255, 255, 255, .15);
+}
+
+/* ---------- Rodapé (usado em todas as páginas) ---------- */
+
+footer {
+  text-align: center;
+  color: rgba(255, 255, 255, .8);
+  font-size: .85rem;
+  padding: 34px 20px;
+}

@@ -1,0 +1,113 @@
+/* ==========================================================
+   receita.css
+   Estilos exclusivos das páginas de receita (ex.: pao-de-queijo.html):
+   o cartão da receita, as seções e o widget de like/dislike.
+   ========================================================== */
+
+.pagina-receita {
+  width: min(760px, 92%);
+  margin: 40px auto;
+  background: var(--cor-cartao);
+  padding: 34px clamp(20px, 4vw, 50px) 44px;
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.intro {
+  font-size: .95rem;
+  text-align: justify;
+  color: var(--cor-texto-suave);
+}
+
+.imagem-receita {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--raio);
+}
+
+/* Cada bloco de conteúdo da receita (sobre, ingredientes, modo de preparo) */
+.secao-receita {
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px dashed rgba(0, 0, 0, .12);
+}
+
+.secao-receita:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.secao-receita h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-acento-escuro);
+  margin-bottom: 14px;
+}
+
+ul.ingredientes {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+ul.ingredientes li {
+  background: #faf6ee;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: .92rem;
+}
+
+.modo-preparo p {
+  text-align: justify;
+  font-size: .92rem;
+  margin-bottom: 10px;
+}
+
+/* ---------- Widget de like/dislike (inserido pelo js/receita.js) ---------- */
+
+.votos {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-voto {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f1f5;
+  border: 2px solid transparent;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-family: var(--fonte-corpo);
+  font-weight: 700;
+  font-size: .85rem;
+  color: var(--cor-texto);
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
+}
+
+.btn-voto:hover:not(:disabled) {
+  background: #e8e8f0;
+}
+
+.btn-voto:disabled {
+  cursor: not-allowed;
+}
+
+/* Estado "já votado" — sinaliza qual opção a pessoa escolheu nesta seção */
+.btn-like.votado {
+  background: var(--cor-like);
+  color: #fff;
+}
+
+.btn-dislike.votado {
+  background: var(--cor-dislike);
+  color: #fff;
+}
+
+.contagem {
+  font-variant-numeric: tabular-nums;
+}
